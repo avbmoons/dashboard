@@ -1,0 +1,48 @@
+@use "sass:math";
+
+$site-width: 100%;
+$site-height: 100vh;
+$header-width: 100%;
+$header-height: 15vh;
+$footer-width: 100%;
+$footer-height: 10vh;
+$main-width: 100%;
+$main-height: ($site-height)-($header-height)-($footer-height);
+$board-width: 20%;
+$services-width: 15%;
+$center-width: ($site-width)-($board-width)-($services-width);
+
+$color-black: #000000; //rgb(0,0,0)
+$color-white: #ffffff; //rgb(255,255,255)
+$color-grey-light: #f0f0f0; //rgb(240,240,240)
+$color-grey-middle: #b8b8b8; //rgb(184,184,184)
+$color-grey-dark: #7d7d7d; //rgb(125,125,125)
+$color-background: #051329; //rgb(5,19,41)
+$color-background-dark: #040e1f;
+$color-status-green: green;
+$color-status-yellow: #fbd13e; //rgb(251,209,62)
+$color-status-red: #b70000; // rgb(183,0,0)
+
+@font-face {
+  font-family: Roboto;
+  src: url(../../assets/font/Roboto.ttf);
+}
+
+@mixin flex-vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+@mixin flex-horizontal {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+@mixin text-font($font-size, $font-weight, $line-height, $letter-spacing) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+}

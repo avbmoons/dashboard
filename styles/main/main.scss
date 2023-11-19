@@ -1,0 +1,154 @@
+@use "sass:math";
+
+@import "../vars/vars.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Roboto;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: $site-width;
+  min-height: $site-height;
+  @include flex-vertical();
+  justify-content: space-between;
+  border: 1px solid red;
+  .top {
+    margin: 0 auto;
+    width: $site-width;
+    height: auto;
+    @include flex-vertical();
+    justify-content: space-between;
+    flex-grow: 1;
+    border: 1px solid green;
+    header {
+      margin: 0 auto;
+      width: $header-width;
+      height: $header-height;
+      @include flex-vertical();
+      justify-content: center;
+      border: 1px solid blue;
+      .header-block {
+        margin: 0 auto;
+        width: 100%;
+        height: $header-height;
+        @include flex-horizontal();
+        justify-content: space-between;
+        &__logo {
+          margin: 0 auto;
+          width: $board-width;
+          @include flex-vertical();
+          background-color: $color-background;
+          color: $color-white;
+          img {
+            margin: 0 auto;
+            height: 40%;
+          }
+        }
+        &__center {
+          margin: 0 auto;
+          width: $center-width;
+          @include flex-vertical();
+          background-color: $color-grey-light;
+          &__box {
+            margin: 0 auto;
+            width: 100%;
+            height: inherit;
+            @include flex-horizontal();
+            justify-content: space-between;
+            //border: 1px solid brown;
+          }
+        }
+        &__services {
+          margin: 0 auto;
+          width: $services-width;
+          @include flex-vertical();
+          background-color: $color-grey-light;
+          &__box {
+            margin: 0 auto;
+            width: 100%;
+            height: inherit;
+            @include flex-horizontal();
+            justify-content: flex-end;
+            &__item {
+              margin-right: 20px;
+            }
+          }
+        }
+      }
+    }
+    main {
+      margin: 0 auto;
+      width: $main-width;
+      min-height: $main-height;
+      @include flex-vertical();
+      justify-content: space-between;
+      border: 1px solid violet;
+      .main-block {
+        margin: 0 auto;
+        width: 100%;
+        height: inherit;
+        @include flex-horizontal();
+        &__board {
+          margin: 0 auto;
+          width: $board-width;
+          height: $main-height;
+          @include flex-vertical();
+          justify-content: flex-start;
+          background-color: $color-background;
+          color: $color-white;
+        }
+        &__fields {
+          margin: 0 auto;
+          width: ($site-width)-($board-width);
+          height: $main-height;
+          @include flex-vertical();
+          justify-content: flex-start;
+          background-color: $color-grey-light;
+          color: $color-black;
+        }
+      }
+    }
+  }
+  footer {
+    margin: 0 auto;
+    width: $footer-width;
+    height: $footer-height;
+    @include flex-vertical();
+    justify-content: space-between;
+    border: 1px solid green;
+    .footer-block {
+      margin: 0 auto;
+      width: 100%;
+      height: inherit;
+      @include flex-horizontal();
+      &__copyrights {
+        margin: 0 auto;
+        width: $board-width;
+        @include flex-horizontal();
+        justify-content: flex-start;
+        background-color: $color-background;
+        color: $color-white;
+      }
+      &__center {
+        margin: 0 auto;
+        width: $center-width;
+        @include flex-horizontal();
+        justify-content: space-between;
+        background-color: $color-grey-middle;
+        border: 1px solid brown;
+      }
+      &__services {
+        margin: 0 auto;
+        width: $services-width;
+        @include flex-horizontal();
+        justify-content: flex-end;
+        background-color: $color-grey-middle;
+      }
+    }
+  }
+}
