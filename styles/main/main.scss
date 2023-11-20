@@ -16,7 +16,6 @@ body {
   min-height: $site-height;
   @include flex-vertical();
   justify-content: space-between;
-  border: 1px solid red;
   .top {
     margin: 0 auto;
     width: $site-width;
@@ -24,14 +23,12 @@ body {
     @include flex-vertical();
     justify-content: space-between;
     flex-grow: 1;
-    border: 1px solid green;
     header {
       margin: 0 auto;
       width: $header-width;
       height: $header-height;
       @include flex-vertical();
       justify-content: center;
-      border: 1px solid blue;
       .header-block {
         margin: 0 auto;
         width: 100%;
@@ -48,26 +45,58 @@ body {
             margin: 0 auto;
             height: 40%;
           }
+          p {
+            margin: 0 auto;
+            margin-top: 10px;
+            @include text-font(14px, 300, 14px, 0%);
+            color: $color-white;
+          }
         }
         &__center {
           margin: 0 auto;
           width: $center-width;
+          height: auto;
           @include flex-vertical();
-          background-color: $color-grey-light;
+          border-bottom: 1px solid $color-grey-middle;
           &__box {
             margin: 0 auto;
             width: 100%;
             height: inherit;
             @include flex-horizontal();
             justify-content: space-between;
-            //border: 1px solid brown;
+            &__menu {
+              padding-left: 10px;
+              width: 70%;
+              @include flex-horizontal();
+              &__button-box {
+                margin: 0 auto;
+                width: 80%;
+                button {
+                  width: 20%;
+                  height: 100%;
+                  background-color: $color-grey-light;
+                  border: none;
+                  @include text-font(14px, 500, 14px, 0%);
+                  color: $color-background;
+                  cursor: pointer;
+                }
+                button:hover {
+                  background-color: $color-grey-middle;
+                  @include text-font(14px, 700, 14px, 0%);
+                }
+              }
+            }
+            &__search {
+              border: 1px solid $color-white;
+            }
           }
         }
         &__services {
           margin: 0 auto;
           width: $services-width;
+          height: auto;
           @include flex-vertical();
-          background-color: $color-grey-light;
+          border-bottom: 1px solid $color-grey-middle;
           &__box {
             margin: 0 auto;
             width: 100%;
@@ -76,6 +105,7 @@ body {
             justify-content: flex-end;
             &__item {
               margin-right: 20px;
+              cursor: pointer;
             }
           }
         }
@@ -87,7 +117,6 @@ body {
       min-height: $main-height;
       @include flex-vertical();
       justify-content: space-between;
-      border: 1px solid violet;
       .main-block {
         margin: 0 auto;
         width: 100%;
@@ -101,6 +130,24 @@ body {
           justify-content: flex-start;
           background-color: $color-background;
           color: $color-white;
+          &__item {
+            margin: 0;
+            margin-left: 10%;
+            margin-top: 10px;
+            width: 80%;
+            button {
+              width: 100%;
+              @include text-font(16px, 400, 16px, 0%);
+              color: $color-white;
+              text-align: left;
+              background-color: $color-background;
+              border: none;
+              cursor: pointer;
+            }
+          }
+          button:hover {
+            @include text-font(16px, 600, 16px, 0%);
+          }
         }
         &__fields {
           margin: 0 auto;
@@ -108,8 +155,15 @@ body {
           height: $main-height;
           @include flex-vertical();
           justify-content: flex-start;
-          background-color: $color-grey-light;
           color: $color-black;
+          &__item {
+            margin: 0 auto;
+            margin-top: 10px;
+            padding: 5px;
+            width: 98%;
+            border: 1px solid $color-grey-middle;
+            border-radius: 2px;
+          }
         }
       }
     }
@@ -120,34 +174,61 @@ body {
     height: $footer-height;
     @include flex-vertical();
     justify-content: space-between;
-    border: 1px solid green;
     .footer-block {
       margin: 0 auto;
       width: 100%;
-      height: inherit;
+      height: $footer-height;
       @include flex-horizontal();
       &__copyrights {
         margin: 0 auto;
         width: $board-width;
-        @include flex-horizontal();
-        justify-content: flex-start;
+        @include flex-vertical();
         background-color: $color-background;
         color: $color-white;
+        p {
+          margin: 0 auto;
+          @include text-font(12px, 300, 12px, 0%);
+          color: $color-grey-light;
+        }
       }
       &__center {
         margin: 0 auto;
         width: $center-width;
-        @include flex-horizontal();
-        justify-content: space-between;
-        background-color: $color-grey-middle;
-        border: 1px solid brown;
+        height: auto;
+        @include flex-vertical();
+        background-color: $color-grey-light;
+        &__box {
+          margin: 0 auto;
+          width: 100%;
+          height: inherit;
+          @include flex-horizontal();
+          justify-content: space-between;
+          &__content {
+            margin: 0 auto;
+            p {
+              @include text-font(12px, 300, 12px, 0%);
+              color: $color-grey-dark;
+            }
+          }
+        }
       }
       &__services {
         margin: 0 auto;
         width: $services-width;
-        @include flex-horizontal();
-        justify-content: flex-end;
-        background-color: $color-grey-middle;
+        height: auto;
+        @include flex-vertical();
+        background-color: $color-grey-light;
+        &__box {
+          margin: 0 auto;
+          width: 100%;
+          height: inherit;
+          @include flex-horizontal();
+          justify-content: flex-end;
+          &__item {
+            margin-right: 20px;
+            cursor: pointer;
+          }
+        }
       }
     }
   }

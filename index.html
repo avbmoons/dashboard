@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
     <link rel="stylesheet" href="styles/main/main.css" />
+    <script src="scripts/today.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -13,12 +14,19 @@
           <div class="header-block">
             <div class="header-block__logo">
               <img src="assets/logo/logo.png" alt="logo" />
+              <p id="currentDateTime"></p>
             </div>
 
             <div class="header-block__center">
               <div class="header-block__center__box">
                 <nav class="header-block__center__box__menu">
                   <img src="assets/icons/burger.png" alt="burger" />
+                  <div class="header-block__center__box__menu__button-box">
+                    <button>Database</button>
+                    <button>Statistic</button>
+                    <button>Users</button>
+                    <button>Logs</button>
+                  </div>
                 </nav>
                 <div class="header-block__center__box__search">
                   <img src="assets/icons/search3.png" alt="search" />
@@ -29,13 +37,13 @@
             <div class="header-block__services">
               <div class="header-block__services__box">
                 <div class="header-block__services__box__item">
-                  <img src="assets/icons/notice.png" alt="notice" />
+                  <img src="assets/icons/notice2.png" alt="notice" />
                 </div>
                 <div class="header-block__services__box__item">
-                  <img src="assets/icons/mail.png" alt="mail" />
+                  <img src="assets/icons/mail2.png" alt="mail" />
                 </div>
                 <div class="header-block__services__box__item">
-                  <img src="assets/icons/user3.png" alt="user" />
+                  <img src="assets/icons/avatarBoy.png" alt="user" />
                 </div>
               </div>
             </div>
@@ -43,16 +51,49 @@
         </header>
         <main>
           <div class="main-block">
-            <div class="main-block__board">board</div>
-            <div class="main-block__fields">fields</div>
+            <div class="main-block__board">
+              <div class="main-block__board__item">
+                <button>board item</button>
+              </div>
+              <div class="main-block__board__item">
+                <button>board item</button>
+              </div>
+              <div class="main-block__board__item">
+                <button>board item</button>
+              </div>
+            </div>
+            <div class="main-block__fields">
+              <div class="main-block__fields__item">fields item</div>
+              <div class="main-block__fields__item">fields item</div>
+            </div>
           </div>
         </main>
       </div>
       <footer>
         <div class="footer-block">
-          <div class="footer-block__copyrights">copy</div>
-          <div class="footer-block__center">center</div>
-          <div class="footer-block__services">services</div>
+          <div class="footer-block__copyrights">
+            <p>&#169;&nbsp;2003 All rights reserved</p>
+          </div>
+          <div class="footer-block__center">
+            <div class="footer-block__center__box">
+              <nav class="footer-block__center__box__content">
+                <p>Any content</p>
+              </nav>
+            </div>
+          </div>
+          <div class="footer-block__services">
+            <div class="footer-block__services__box">
+              <div class="footer-block__services__box__item">
+                <img src="assets/icons/repo.png" alt="repo" />
+              </div>
+              <div class="footer-block__services__box__item">
+                <img src="assets/icons/clouds.png" alt="clouds" />
+              </div>
+              <div class="footer-block__services__box__item">
+                <img src="assets/icons/database.png" alt="database" />
+              </div>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
