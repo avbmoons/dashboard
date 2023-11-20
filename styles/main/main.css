@@ -77,7 +77,7 @@ body {
 .wrapper .top header .header-block__center {
   margin: 0 auto;
   width: 65%;
-  height: auto;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -87,7 +87,7 @@ body {
 .wrapper .top header .header-block__center__box {
   margin: 0 auto;
   width: 100%;
-  height: inherit;
+  height: auto;
   display: flex;
   justify-content: center;
   box-sizing: border-box;
@@ -99,6 +99,56 @@ body {
   display: flex;
   justify-content: center;
   box-sizing: border-box;
+}
+.wrapper .top header .header-block__center__box__menu__burger-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  justify-content: flex-start;
+}
+.wrapper .top header .header-block__center__box__menu__burger-box__burger {
+  border: 1px solid #ffffff;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+.wrapper .top header .header-block__center__box__menu__burger-box .site-menu {
+  position: absolute;
+  left: -20%;
+  top: 3.75vh;
+  min-width: 20vw;
+  padding-left: 10px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: #f0f0f0;
+  border-color: #b8b8b8;
+  border-radius: 2px;
+  display: none;
+  z-index: 1;
+}
+.wrapper .top header .header-block__center__box__menu__burger-box .site-menu__link {
+  margin-bottom: 10px;
+  text-decoration: none;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0%;
+  color: #051329;
+}
+.wrapper .top header .header-block__center__box__menu__burger-box .site-menu__link:hover {
+  color: green;
+}
+.wrapper .top header .header-block__center__box__menu__burger-box__burger:hover {
+  border: 1px solid #b8b8b8;
+  border-radius: 2px;
+}
+.wrapper .top header .header-block__center__box__menu__burger-box:hover .site-menu {
+  display: inline-flex;
 }
 .wrapper .top header .header-block__center__box__menu__button-box {
   margin: 0 auto;
@@ -123,8 +173,45 @@ body {
   line-height: 14px;
   letter-spacing: 0%;
 }
+.wrapper .top header .header-block__center__box__menu__button-box button:focus {
+  background-color: #b8b8b8;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0%;
+}
 .wrapper .top header .header-block__center__box__search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.wrapper .top header .header-block__center__box__search__input-box {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+.wrapper .top header .header-block__center__box__search__input-box__button-search {
+  margin-left: 10px;
   border: 1px solid #ffffff;
+  border-radius: 2px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+.wrapper .top header .header-block__center__box__search__input-box__input-search {
+  padding-left: 5px;
+  border: 1px solid #b8b8b8;
+  border-radius: 2px;
+}
+.wrapper .top header .header-block__center__box__search__input-box__button-search:hover {
+  border: 1px solid #7d7d7d;
+  border-radius: 2px;
+}
+.wrapper .top header .header-block__center__box__search__input-box__input-search:focus {
+  outline: #b8b8b8;
+  background-color: #f0f0f0;
 }
 .wrapper .top header .header-block__services {
   margin: 0 auto;
@@ -147,7 +234,23 @@ body {
 }
 .wrapper .top header .header-block__services__box__item {
   margin-right: 20px;
+  padding: 2px;
   cursor: pointer;
+  border: 1px solid #ffffff;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+.wrapper .top header .header-block__services__box__item:hover {
+  border: 1px solid #7d7d7d;
+  border-radius: 2px;
+}
+.wrapper .top header .header-block__services__box .user {
+  height: 90%;
+  border-radius: 20px;
+}
+.wrapper .top header .header-block__services__box .user:hover {
+  border: 1px solid #7d7d7d;
+  border-radius: 20px;
 }
 .wrapper .top main {
   margin: 0 auto;
@@ -308,5 +411,13 @@ body {
 }
 .wrapper footer .footer-block__services__box__item {
   margin-right: 20px;
+  padding: 2px;
   cursor: pointer;
+  border: 1px solid #f0f0f0;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+.wrapper footer .footer-block__services__box__item:hover {
+  border: 1px solid #7d7d7d;
+  border-radius: 2px;
 }/*# sourceMappingURL=main.css.map */

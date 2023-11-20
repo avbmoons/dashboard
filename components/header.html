@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>header</title>
+    <link rel="stylesheet" href="../styles/components/header/header.css" />
+    <script src="../scripts/today.js"></script>
+    <script src="../scripts/menuFuncs.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-block">
+        <div class="header-block__logo">
+          <img src="../assets/logo/logo.png" alt="logo" />
+          <p id="currentDateTime"></p>
+        </div>
+
+        <div class="header-block__center">
+          <div class="header-block__center__box">
+            <nav class="header-block__center__box__menu">
+              <div class="header-block__center__box__menu__burger-box">
+                <button
+                  class="header-block__center__box__menu__burger-box__burger"
+                >
+                  <img src="../assets/icons/burger.png" alt="burger" />
+                </button>
+                <div class="site-menu">
+                  <a class="site-menu__link" href="#">Site-menu 1</a>
+                  <a class="site-menu__link" href="#">Site-menu 2</a>
+                  <a class="site-menu__link" href="#">Site-menu 3</a>
+                </div>
+              </div>
+
+              <div class="header-block__center__box__menu__button-box">
+                <button onclick="toDatabasePages()">Database</button>
+                <button onclick="toStatisticPages()">Statistic</button>
+                <button onclick="toUsersPages()">Users</button>
+                <button onclick="toLogsPages()">Logs</button>
+              </div>
+            </nav>
+            <div class="header-block__center__box__search">
+              <div class="header-block__center__box__search__input-box">
+                <input
+                  class="header-block__center__box__search__input-box__input-search"
+                  type="text"
+                  placeholder="Search"
+                />
+                <button
+                  class="header-block__center__box__search__input-box__button-search"
+                >
+                  <img src="../assets/icons/search3.png" alt="search" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="header-block__services">
+          <div class="header-block__services__box">
+            <div class="header-block__services__box__item">
+              <img src="../assets/icons/notice2.png" alt="notice" />
+            </div>
+            <div class="header-block__services__box__item">
+              <img src="../assets/icons/mail2.png" alt="mail" />
+            </div>
+            <div class="header-block__services__box__item user">
+              <img src="../assets/icons/avatarBoy.png" alt="user" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>

@@ -1,0 +1,88 @@
+@use "sass:math";
+
+@import "../../vars/vars.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Roboto;
+}
+
+@mixin footer {
+  footer {
+    margin: 0 auto;
+    width: $footer-width;
+    height: $footer-height;
+    @include flex-vertical();
+    justify-content: space-between;
+    .footer-block {
+      margin: 0 auto;
+      width: 100%;
+      height: $footer-height;
+      @include flex-horizontal();
+      &__copyrights {
+        margin: 0 auto;
+        width: $board-width;
+        @include flex-vertical();
+        background-color: $color-background;
+        color: $color-white;
+        p {
+          margin: 0 auto;
+          @include text-font(12px, 300, 12px, 0%);
+          color: $color-grey-light;
+        }
+      }
+      &__center {
+        margin: 0 auto;
+        width: $center-width;
+        height: auto;
+        @include flex-vertical();
+        background-color: $color-grey-light;
+        &__box {
+          margin: 0 auto;
+          width: 100%;
+          height: inherit;
+          @include flex-horizontal();
+          justify-content: space-between;
+          &__content {
+            margin: 0 auto;
+            p {
+              @include text-font(12px, 300, 12px, 0%);
+              color: $color-grey-dark;
+            }
+          }
+        }
+      }
+      &__services {
+        margin: 0 auto;
+        width: $services-width;
+        height: auto;
+        @include flex-vertical();
+        background-color: $color-grey-light;
+        &__box {
+          margin: 0 auto;
+          width: 100%;
+          height: inherit;
+          @include flex-horizontal();
+          justify-content: flex-end;
+          &__item {
+            margin-right: 20px;
+            padding: 2px;
+            cursor: pointer;
+            border: 1px solid $color-grey-light;
+            border-radius: 2px;
+            box-sizing: border-box;
+          }
+          &__item:hover {
+            border: 1px solid $color-grey-dark;
+            border-radius: 2px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include footer();

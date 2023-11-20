@@ -1,6 +1,8 @@
 @use "sass:math";
 
 @import "../vars/vars.scss";
+@import "../components/header/header.scss";
+@import "../components/footer/footer.scss";
 
 * {
   margin: 0;
@@ -8,4 +10,78 @@
 }
 body {
   font-family: Roboto;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: $site-width;
+  min-height: $site-height;
+  @include flex-vertical();
+  justify-content: space-between;
+  .top {
+    margin: 0 auto;
+    width: $site-width;
+    height: auto;
+    @include flex-vertical();
+    justify-content: space-between;
+    flex-grow: 1;
+    @include header();
+    main {
+      margin: 0 auto;
+      width: $main-width;
+      min-height: $main-height;
+      @include flex-vertical();
+      justify-content: space-between;
+      .main-block {
+        margin: 0 auto;
+        width: 100%;
+        height: inherit;
+        @include flex-horizontal();
+        &__board {
+          margin: 0 auto;
+          width: $board-width;
+          height: $main-height;
+          @include flex-vertical();
+          justify-content: flex-start;
+          background-color: $color-background;
+          color: $color-white;
+          &__item {
+            margin: 0;
+            margin-left: 10%;
+            margin-top: 10px;
+            width: 80%;
+            button {
+              width: 100%;
+              @include text-font(16px, 400, 16px, 0%);
+              color: $color-white;
+              text-align: left;
+              background-color: $color-background;
+              border: none;
+              cursor: pointer;
+            }
+          }
+          button:hover {
+            @include text-font(16px, 600, 16px, 0%);
+          }
+        }
+        &__fields {
+          margin: 0 auto;
+          width: ($site-width)-($board-width);
+          height: $main-height;
+          @include flex-vertical();
+          justify-content: flex-start;
+          color: $color-black;
+          &__item {
+            margin: 0 auto;
+            margin-top: 10px;
+            padding: 5px;
+            width: 98%;
+            border: 1px solid $color-grey-middle;
+            border-radius: 2px;
+          }
+        }
+      }
+    }
+  }
+  @include footer();
 }

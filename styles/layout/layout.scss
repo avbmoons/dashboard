@@ -1,6 +1,8 @@
 @use "sass:math";
 
 @import "../vars/vars.scss";
+@import "../components/header/header.scss";
+@import "../components/footer/footer.scss";
 
 * {
   margin: 0;
@@ -23,94 +25,7 @@ body {
     @include flex-vertical();
     justify-content: space-between;
     flex-grow: 1;
-    header {
-      margin: 0 auto;
-      width: $header-width;
-      height: $header-height;
-      @include flex-vertical();
-      justify-content: center;
-      .header-block {
-        margin: 0 auto;
-        width: 100%;
-        height: $header-height;
-        @include flex-horizontal();
-        justify-content: space-between;
-        &__logo {
-          margin: 0 auto;
-          width: $board-width;
-          @include flex-vertical();
-          background-color: $color-background;
-          color: $color-white;
-          img {
-            margin: 0 auto;
-            height: 40%;
-          }
-          p {
-            margin: 0 auto;
-            margin-top: 10px;
-            @include text-font(14px, 300, 14px, 0%);
-            color: $color-white;
-          }
-        }
-        &__center {
-          margin: 0 auto;
-          width: $center-width;
-          height: auto;
-          @include flex-vertical();
-          border-bottom: 1px solid $color-grey-middle;
-          &__box {
-            margin: 0 auto;
-            width: 100%;
-            height: inherit;
-            @include flex-horizontal();
-            justify-content: space-between;
-            &__menu {
-              padding-left: 10px;
-              width: 70%;
-              @include flex-horizontal();
-              &__button-box {
-                margin: 0 auto;
-                width: 80%;
-                button {
-                  width: 20%;
-                  height: 100%;
-                  background-color: $color-grey-light;
-                  border: none;
-                  @include text-font(14px, 500, 14px, 0%);
-                  color: $color-background;
-                  cursor: pointer;
-                }
-                button:hover {
-                  background-color: $color-grey-middle;
-                  @include text-font(14px, 700, 14px, 0%);
-                }
-              }
-            }
-            &__search {
-              border: 1px solid $color-white;
-            }
-          }
-        }
-        &__services {
-          margin: 0 auto;
-          width: $services-width;
-          height: auto;
-          @include flex-vertical();
-          border-bottom: 1px solid $color-grey-middle;
-          &__box {
-            margin: 0 auto;
-            width: 100%;
-            height: inherit;
-            @include flex-horizontal();
-            justify-content: flex-end;
-            &__item {
-              margin-right: 20px;
-              cursor: pointer;
-            }
-          }
-        }
-      }
-    }
+    @include header();
     main {
       margin: 0 auto;
       width: $main-width;
@@ -168,68 +83,5 @@ body {
       }
     }
   }
-  footer {
-    margin: 0 auto;
-    width: $footer-width;
-    height: $footer-height;
-    @include flex-vertical();
-    justify-content: space-between;
-    .footer-block {
-      margin: 0 auto;
-      width: 100%;
-      height: $footer-height;
-      @include flex-horizontal();
-      &__copyrights {
-        margin: 0 auto;
-        width: $board-width;
-        @include flex-vertical();
-        background-color: $color-background;
-        color: $color-white;
-        p {
-          margin: 0 auto;
-          @include text-font(12px, 300, 12px, 0%);
-          color: $color-grey-light;
-        }
-      }
-      &__center {
-        margin: 0 auto;
-        width: $center-width;
-        height: auto;
-        @include flex-vertical();
-        background-color: $color-grey-light;
-        &__box {
-          margin: 0 auto;
-          width: 100%;
-          height: inherit;
-          @include flex-horizontal();
-          justify-content: space-between;
-          &__content {
-            margin: 0 auto;
-            p {
-              @include text-font(12px, 300, 12px, 0%);
-              color: $color-grey-dark;
-            }
-          }
-        }
-      }
-      &__services {
-        margin: 0 auto;
-        width: $services-width;
-        height: auto;
-        @include flex-vertical();
-        background-color: $color-grey-light;
-        &__box {
-          margin: 0 auto;
-          width: 100%;
-          height: inherit;
-          @include flex-horizontal();
-          justify-content: flex-end;
-          &__item {
-            margin-right: 20px;
-            cursor: pointer;
-          }
-        }
-      }
-    }
-  }
+  @include footer();
 }

@@ -1,0 +1,109 @@
+@font-face {
+  font-family: Roboto;
+  src: url(../../assets/font/Roboto.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto;
+}
+
+footer {
+  margin: 0 auto;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+footer .footer-block {
+  margin: 0 auto;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+footer .footer-block__copyrights {
+  margin: 0 auto;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: #051329;
+  color: #ffffff;
+}
+footer .footer-block__copyrights p {
+  margin: 0 auto;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 12px;
+  letter-spacing: 0%;
+  color: #f0f0f0;
+}
+footer .footer-block__center {
+  margin: 0 auto;
+  width: 65%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: #f0f0f0;
+}
+footer .footer-block__center__box {
+  margin: 0 auto;
+  width: 100%;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+footer .footer-block__center__box__content {
+  margin: 0 auto;
+}
+footer .footer-block__center__box__content p {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 12px;
+  letter-spacing: 0%;
+  color: #7d7d7d;
+}
+footer .footer-block__services {
+  margin: 0 auto;
+  width: 15%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: #f0f0f0;
+}
+footer .footer-block__services__box {
+  margin: 0 auto;
+  width: 100%;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  justify-content: flex-end;
+}
+footer .footer-block__services__box__item {
+  margin-right: 20px;
+  padding: 2px;
+  cursor: pointer;
+  border: 1px solid #f0f0f0;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+footer .footer-block__services__box__item:hover {
+  border: 1px solid #7d7d7d;
+  border-radius: 2px;
+}/*# sourceMappingURL=footer.css.map */

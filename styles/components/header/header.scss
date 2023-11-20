@@ -1,0 +1,189 @@
+@use "sass:math";
+
+@import "../../vars/vars.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Roboto;
+}
+
+@mixin header {
+  header {
+    margin: 0 auto;
+    width: $header-width;
+    height: $header-height;
+    @include flex-vertical();
+    justify-content: center;
+    .header-block {
+      margin: 0 auto;
+      width: 100%;
+      height: $header-height;
+      @include flex-horizontal();
+      justify-content: space-between;
+      &__logo {
+        margin: 0 auto;
+        width: $board-width;
+        @include flex-vertical();
+        background-color: $color-background;
+        color: $color-white;
+        img {
+          margin: 0 auto;
+          height: 40%;
+        }
+        p {
+          margin: 0 auto;
+          margin-top: 10px;
+          @include text-font(14px, 300, 14px, 0%);
+          color: $color-white;
+        }
+      }
+      &__center {
+        margin: 0 auto;
+        width: $center-width;
+        height: 100%;
+        @include flex-vertical();
+        border-bottom: 1px solid $color-grey-middle;
+        &__box {
+          margin: 0 auto;
+          width: 100%;
+          height: auto;
+          @include flex-horizontal();
+          justify-content: space-between;
+          &__menu {
+            padding-left: 10px;
+            width: 70%;
+            @include flex-horizontal();
+            &__burger-box {
+              position: relative;
+              @include flex-vertical();
+              justify-content: flex-start;
+              &__burger {
+                border: 1px solid $color-white;
+                background-color: $color-white;
+                cursor: pointer;
+              }
+              .site-menu {
+                position: absolute;
+                left: -$board-width;
+                top: 0.25 * ($header-height);
+                min-width: 20vw;
+                padding-left: 10px;
+                padding-top: 10px;
+                @include flex-vertical();
+                background-color: $color-grey-light;
+                border-color: $color-grey-middle;
+                border-radius: 2px;
+                display: none;
+                z-index: 1;
+                &__link {
+                  margin-bottom: 10px;
+                  text-decoration: none;
+                  text-align: left;
+                  @include text-font(14px, 400, 14px, 0%);
+                  color: $color-background;
+                }
+                &__link:hover {
+                  color: $color-status-green;
+                }
+              }
+              &__burger:hover {
+                border: 1px solid $color-grey-middle;
+                border-radius: 2px;
+              }
+            }
+            &__burger-box:hover .site-menu {
+              display: inline-flex;
+            }
+            &__button-box {
+              margin: 0 auto;
+              width: 80%;
+              button {
+                width: 20%;
+                height: 100%;
+                background-color: $color-grey-light;
+                border: none;
+                @include text-font(14px, 500, 14px, 0%);
+                color: $color-background;
+                cursor: pointer;
+              }
+              button:hover {
+                background-color: $color-grey-middle;
+                @include text-font(14px, 700, 14px, 0%);
+              }
+              button:focus {
+                background-color: $color-grey-middle;
+                @include text-font(14px, 700, 14px, 0%);
+              }
+            }
+          }
+          &__search {
+            @include flex-vertical();
+            &__input-box {
+              height: 100%;
+              @include flex-horizontal();
+              justify-content: space-between;
+              &__button-search {
+                margin-left: 10px;
+                border: 1px solid $color-white;
+                border-radius: 2px;
+                background-color: $color-white;
+                cursor: pointer;
+              }
+              &__input-search {
+                padding-left: 5px;
+                border: 1px solid $color-grey-middle;
+                border-radius: 2px;
+              }
+              &__button-search:hover {
+                border: 1px solid $color-grey-dark;
+                border-radius: 2px;
+              }
+              &__input-search:focus {
+                outline: $color-grey-middle;
+                background-color: $color-grey-light;
+              }
+            }
+          }
+        }
+      }
+      &__services {
+        margin: 0 auto;
+        width: $services-width;
+        height: auto;
+        @include flex-vertical();
+        border-bottom: 1px solid $color-grey-middle;
+        &__box {
+          margin: 0 auto;
+          width: 100%;
+          height: inherit;
+          @include flex-horizontal();
+          justify-content: flex-end;
+          &__item {
+            margin-right: 20px;
+            padding: 2px;
+            cursor: pointer;
+            border: 1px solid $color-white;
+            border-radius: 2px;
+            box-sizing: border-box;
+          }
+          &__item:hover {
+            border: 1px solid $color-grey-dark;
+            border-radius: 2px;
+          }
+          .user {
+            height: 90%;
+            border-radius: 20px;
+          }
+          .user:hover {
+            border: 1px solid $color-grey-dark;
+            border-radius: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+@include header();
